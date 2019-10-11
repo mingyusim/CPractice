@@ -10,28 +10,40 @@ int main() {
   printf("평균을 입력하세요 : ");
   scanf("%f", &avg);
 
-  /*if(avg >= 90) printf("등급은 A입니다.\n");
+  /* ---if문으로 구현---
+  <<교수님방식>>
+  char grade;
+  if (avg >= 90) grade = 'A';
+    else if (avg >= 80) grade = 'B';
+    else if (avg >= 70) grade = 'C';
+    else grade = 'F';
+
+  printf("평균은 %f이고, 등급은 %c입니다", avg, grade); */
+
+  /* <<내 방식>>
+
+  if(avg >= 90) printf("등급은 A입니다.\n");
   else if(avg >= 80) printf("등급은 B입니다.\n");
   else if(avg >= 70) printf("등급은 C입니다.\n");
   else printf("등급은 F입니다.\n");*/
 
-  if(avg >= 90) gde = 1;
-    else if(avg >= 80) gde = 2;
-    else if(avg >= 70) gde = 3;
-    else gde = 4;
-
-  switch(gde) {
-    case 1:
+  switch((int)avg / 10) {
+    case 10:
+    case 9:
       printf("등급은 A입니다.\n");
+      // grade = 'A';
       break;
-    case 2:
+    case 8:
       printf("등급은 B입니다.\n");
+      // grade = 'B';
       break;
-    case 3:
+    case 7:
       printf("등급은 C입니다.\n");
+      // grade = 'C';
       break;
     default :
       printf("등급은 F입니다.\n");
+      // grade = 'F';
   }
 
   return 0;
