@@ -7,6 +7,7 @@ int main() {
   int gde;
   float avg;
 
+  home :
   printf("평균을 입력하세요 : ");
   scanf("%f", &avg);
 
@@ -27,6 +28,13 @@ int main() {
   else if(avg >= 70) printf("등급은 C입니다.\n");
   else printf("등급은 F입니다.\n");*/
 
+  if(avg > 100) {
+    printf("\t<<Warning>>\n");
+    printf("\t평균은 0에서 100사이만 가능합니다.\n");
+    printf("\t다시 입력하세요.\n\n");
+    goto home;
+  }
+
   switch((int)avg / 10) {
     case 10:
     case 9:
@@ -41,9 +49,21 @@ int main() {
       printf("등급은 C입니다.\n");
       // grade = 'C';
       break;
-    default :
+    case 6:
+    case 5:
+    case 4:
+    case 3:
+    case 2:
+    case 1:
+    case 0:
       printf("등급은 F입니다.\n");
       // grade = 'F';
+      break;
+    default :
+      printf("\t<<Warning>>\n");
+      printf("\t평균은 0에서 100사이만 가능합니다.\n");
+      printf("\t다시 입력하세요.\n\n");
+      goto home;
   }
 
   return 0;
