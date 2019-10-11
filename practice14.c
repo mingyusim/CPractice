@@ -17,5 +17,6 @@ int main() {
   if(iValue1 > iValue2) printf("%d이(가) 더 큰 정수입니다.\n", iValue1);
     else if(iValue1 < iValue2) printf("%d이(가) 더 큰 정수입니다.\n", iValue2);
     else printf("%d와(과) %d은(는) 같은 정수입니다.\n", iValue1, iValue2);
+
   return 0;
 }
