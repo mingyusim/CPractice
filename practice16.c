@@ -29,9 +29,7 @@ int main() {
   else printf("등급은 F입니다.\n");*/
 
   if(avg > 100) {
-    printf("\t<<Warning>>\n");
-    printf("\t평균은 0에서 100사이만 가능합니다.\n");
-    printf("\t다시 입력하세요.\n\n");
+    warning();
     goto home;
   }
 
@@ -60,11 +58,15 @@ int main() {
       // grade = 'F';
       break;
     default :
-      printf("\t<<Warning>>\n");
-      printf("\t평균은 0에서 100사이만 가능합니다.\n");
-      printf("\t다시 입력하세요.\n\n");
+      warning();
       goto home;
   }
 
   return 0;
+}
+
+void warning() {
+  printf("\t<<Warning>>\n");
+  printf("\t평균은 0에서 100사이만 가능합니다.\n");
+  printf("\t다시 입력하세요.\n\n");
 }
