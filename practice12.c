@@ -1,4 +1,4 @@
-#include <stdio.h>
+#include<stdio.h>
 
 int main() {
   /* 하나의 정수를 입력받아
