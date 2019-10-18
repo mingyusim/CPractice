@@ -21,7 +21,7 @@ int main() {
 
   printf("평균은 %f점 입니다, 학점은 %c입니다", avg, grade); */
 
-  /* <<교수님 방법>>
+  /* <<내 방법>>
 
   if(avg >= 90) printf("A학점입니다.\n");
   else if(avg >= 80) printf("B학점입니다.\n");
