@@ -15,7 +15,6 @@ int main() {
   switch(menu) {
     case 1:
       //입금화면
-      printf("--------------------\n");
       printf("입금할 금액을 입력하세요 : ");
       scanf("%d", &addmoney);   // 50000
 
@@ -30,7 +29,6 @@ int main() {
     case 2:
       //출금화면
       restart :
-      printf("--------------------\n");
       printf("출금할 금액을 입력하세요 : ");
       scanf("%d", &minmoney);
 
@@ -45,7 +43,7 @@ int main() {
 
         //출력
         system("cls");
-        printf("출금 후 잔액은 %d원 입니다.\n", mymoney);
+        printf("출금 후 잔액은 %d원 입니다.\n\n", mymoney);
         goto end;
       }
 
@@ -59,7 +57,7 @@ int main() {
       //종료화면
       system("cls");
       printf("거래를 종료합니다.\n\n");
-      break;
+      goto back;
 
     default :
       system("cls");
@@ -77,19 +75,21 @@ int main() {
   switch(ans) {
     case 1:
       system("cls");
-      printf("\n시작메뉴로 돌아갑니다.\n\n");
+      printf("시작메뉴로 돌아갑니다.\n\n");
       goto home;
 
     case 2:
       system("cls");
-      printf("\n거래를 종료합니다.\n\n");
+      printf("거래를 종료합니다.\n");
       break;
 
     default :
       system("cls");
-      printf("\n다시 입력해주세요.\n\n");
+      printf("다시 입력해주세요.\n\n");
       goto end;
   }
+
+  back:
 
   return 0;
 }
