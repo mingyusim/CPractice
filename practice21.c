@@ -1,12 +1,30 @@
+/* ÀÌ À¯ÇüÀÇ ½ÃÇè¹®Á¦´Â ¹İµå½Ã ³ª¿Â´Ù!.
+Continue¹® ½ÃÇè¹®Á¦¿¡ ¹İµå½Ã ³¾°Å´Ù!*/
 #include <stdio.h>
 
 int main() {
-  int iValue
+  int dan, iCount = 1; // Á¶°Ç¹®, ÃÊ±â°ª ¼ÂÆÃÇØ¾ßµÊ
 
-  printf("ë‹¨ì„ ì…ë ¥í•˜ì„¸ìš” : ");
+  printf("´ÜÀ» ÀÔ·ÂÇÏ¼¼¿ä : ");
   scanf("%d", &dan);
 
-  for(int i = 1; i <= 9; i++) {
-    printf("%d * %d = %d\n", dan, i, dan*i);
+  while(iCount <= 9) {
+    if (iCount == 5) {
+      iCount ++;  // ÀÌ Áõ°¨°ªÀ» ³ÖÁö ¾ÊÀ¸¸é ½ÇÇàÀÌ 4¿¡¼­ ¸ØÃã
+      continue;
+    }
+    printf("%d * %d = %d\n", dan, iCount, dan*iCount);
+    iCount ++;
   }
+
+  /*for (int i = 1; i <= 9; i++) {
+    if (i == 5) {
+      // break;
+      continue; // ¾Æ·¡¸¦ passÇÏ°í ´ÙÀ½ Áß°¨°ªÀ¸·Î
+    }
+    printf("%d * %d = %d\n", dan, i, dan*i);
+  }*/
+  printf("¹İº¹¹®À» ¹ş¾î³µ½À´Ï´Ù.\n");
+
+  return 0;
 }
