@@ -1,6 +1,68 @@
 #include <stdio.h>
 
-// 3ë‹¨ê³„ ì‘ìš© : ë¦¬í„´íƒ€ì… O, ë§¤ê°œë³€ìˆ˜ O
-void main() {
+int mySum(int k, int m, int e);
+float myAvg(int t);
+char myGrade(float g);
 
+int main() {
+  // ¼¼ °³ÀÇ ¼ıÀÚ¸¦ ÀÔ·Â¹Ş¾Æ ÃÑÁ¡°ú Æò±Õ, µî±ŞÀ» ±¸ÇÏ´Â ÇÁ·Î±×·¥
+  int kor, math, eng, tot;
+  float avg;
+  char grade;
+
+  printf("<¼¼ °ú¸ñÀÇ Á¡¼ö¸¦ ÀÔ·ÂÇÏ¼¼¿ä>\n");
+  printf("±¹¾î : ");
+  scanf("%d", &kor);
+  printf("¼öÇĞ : ");
+  scanf("%d", &math);
+  printf("¿µ¾î : ");
+  scanf("%d", &eng);
+
+  tot = mySum(kor, math, eng);
+  avg = myAvg(tot);
+  grade = myGrade(avg);
+
+  // tot, avg, grade Ãâ·Â
+  printf("¼ºÀûÀÇ ÇÕ°è´Â %dÁ¡ ÀÔ´Ï´Ù.\n", tot);
+  printf("¼ºÀûÀÇ Æò±ÕÀº %.2fÁ¡ ÀÔ´Ï´Ù.\n", avg);
+  printf("¼ºÀûÀº %cÀÔ´Ï´Ù.", grade);
+}
+
+int mySum(int k, int m, int e) {
+  int result;
+  result = k + m + e;
+
+  return result;
+}
+
+float myAvg(int t) {
+  float result;
+  result = t/(float)3;
+
+  return result;
+}
+
+char myGrade(float g) {
+  char div;
+
+  switch((int)g / 10) {
+    case 10:
+    case 9:
+      div = 'A';
+      break;
+    case 8:
+      div = 'B';
+      break;
+    case 7:
+      div = 'C';
+      break;
+    case 6:
+      div = 'D';
+      break;
+    default :
+      div = 'F';
+      break;
+  }
+
+  return div;
 }
