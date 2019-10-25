@@ -3,17 +3,7 @@
   (함수의 선언 미사용) */
 #include <stdio.h>
 
-int myAbs(int value) {
-  int iAbs;
-
-  if(iAbs > 0) {
-    iAbs = value;
-  } else {
-    iAbs = -value;
-  }
-
-  return iAbs;
-}
+int myAbs(int value);
 
 int main() {
   int iValue, iResult;
@@ -26,4 +16,16 @@ int main() {
   printf("%d의 절댓값은 %d입니다.\n", iValue, iResult);
 
   return 0;
+}
+
+int myAbs(int value) {
+  int iAbs;
+
+  if (value > 0) {
+    iAbs = value;
+  } else {
+    iAbs = -value;
+  }
+
+  return iAbs;
 }
