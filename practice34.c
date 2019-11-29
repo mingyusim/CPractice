@@ -16,6 +16,7 @@ int main() {
   /*2단계 : 배열의 주소를 함수의 인수(배열)로 전달
   call by reference*/
   printValue2(iValue, 5);
+  //printValue2(iValue, sizeof(iValue)/sizeof(int));
 
   //3단계 : 배열의 주소를 함수의 인수(포인터)로 전달
   printValue3(iValue, 5);
