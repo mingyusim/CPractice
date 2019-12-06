@@ -24,7 +24,7 @@ int main() {
 }
 
 char* myresult(float a) {
-  char result[10];
+  static char result[10];
 
   if(a >= 90) strcpy(result, "합격");
   else strcpy(result, "불합격");
